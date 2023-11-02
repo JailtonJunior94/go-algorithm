@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	// searchItem := 4
@@ -13,7 +16,7 @@ func main() {
 	// }
 	// fmt.Printf("O item NÃO foi encontrado e a quantidade de tentativas foi %d\n", count)
 
-	name := "Lucas"
+	name := "Samuel"
 	listNames := []string{
 		"Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah", "Isaac", "Julia",
 		"Liam", "Olivia", "Noah", "Emma", "Jackson", "Sophia", "Aiden", "Oliver", "Lucas", "Mia",
@@ -29,6 +32,8 @@ func main() {
 		"David", "Samantha", "Leo", "Gabriella", "Daniel", "Aria", "Gabriel", "Lucy", "Anthony", "Nora",
 		"Jonathan", "Riley", "Nicholas", "Eva", "Jackson", "Scarlet", "Robert", "Anna", "Henry", "Ariel",
 	}
+
+	sort.Strings(listNames)
 
 	foundName, countName := searchBinaryWithName(listNames, name)
 	if foundName {
